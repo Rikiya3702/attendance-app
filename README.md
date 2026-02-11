@@ -1,23 +1,29 @@
-# Antigravity Attendance App
+# Antigravity 勤怠管理アプリ
 
-A premium, glassmorphic attendance management application built with HTML, CSS, and Vanilla JavaScript.
+HTML、CSS、Vanilla JavaScript で構築された、プレミアムなグラスモーフィズムデザインの勤怠管理アプリケーションです。
 
-## Features
-- **Real-time Clock**: A beautiful digital clock and date display.
-- **Clock In/Out**: One-click attendance recording with LocalStorage persistence.
-- **Monthly History**: A calendar-style list view of all attendance records for the month.
-- **Advanced Calculations**:
-    - 15-minute rounding (Clock-in: up, Clock-out: down).
-    - Automatic break time calculation (45m/60m based on hours).
-    - Overtime calculation (Work hours exceeding 8h).
-- **Monthly Summary**: Dashboard showing total days worked, total hours, and overtime.
-- **Modal Editing**: Secure and intuitive modal interface for adding or modifying attendance entries.
-- **Responsive Design**: Optimized for both desktop and mobile devices.
+## 主な機能
+- **リアルタイム時計**: 美しいデジタル時計と日付表示。
+- **出勤・退勤記録**: ワンクリックで打刻し、ブラウザの LocalStorage に保存されます。
+- **月別履歴**: 月ごとの全打刻記録をカレンダー形式で一覧表示。
+- **高度な計算ロジック**:
+    - 15分単位のまるめ処理（出勤：切り上げ、退勤：切り捨て）。
+    - 勤務時間に応じた休憩時間の自動算出（45分 / 60分）。
+    - 8時間を超える勤務に対する残業時間の算出。
+- **月間統計ダッシュボード**: その月の合計出勤日数、総勤務時間、総残業時間を表示。
+- **モーダル編集**: 履歴の修正や追加を安全かつ直感的なモーダル UI で行えます。
+- **レスポンシブ対応**: PC とスマートフォンの両方に最適化されています。
 
-## How to Run
-Simply open `index.html` in any modern web browser. No installation or server required.
+## 使い方
+特別なサーバーやインストールは不要です。`index.html` を任意の最新ブラウザで開くだけで動作します。
 
-## Technologies Used
-- HTML5 (Semantic tags)
-- CSS3 (Glassmorphism, Flexbox/Grid, Animations)
-- JavaScript (ES6+, LocalStorage API)
+## 使用技術
+- HTML5 (セマンティックタグ)
+- CSS3 (グラスモーフィズム、Flexbox/Grid、アニメーション)
+- JavaScript (ES6+、LocalStorage API)
+
+## ドキュメント
+プロジェクトの設計や進捗に関するドキュメントは `docs/` フォルダに格納されています。
+- [実装計画書](docs/implementation_plan.md)
+- [タスク管理](docs/task.md)
+- [完了報告書 (Walkthrough)](docs/walkthrough.md)
