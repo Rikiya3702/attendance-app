@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance History - Premium Attendance Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header>
+            <a href="index.html" class="nav-link">← 戻る</a>
+            <h1>Monthly History</h1>
+        </header>
+
+        <section class="history-card">
+            <div class="history-header">
+                <div class="month-selector">
+                    <label for="month-select">表示月:</label>
+                    <select id="month-select"></select>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-label">出勤日数</span>
+                        <span id="stat-days" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">合計勤務</span>
+                        <span id="stat-total-work" class="stat-value">0h 0m</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">残業合計</span>
+                        <span id="stat-total-overtime" class="stat-value">0h 0m</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-list-container">
+                <table id="attendance-history">
+                    <thead>
+                        <tr>
+                            <th>日付</th>
+                            <th>出勤</th>
+                            <th>退勤</th>
+                            <th>実働</th>
+                            <th>休憩</th>
+                            <th>残業</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-body">
+                        <!-- 履歴がここに挿入されます -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-date">----/--/--</h2>
+            <div class="modal-body">
+                <div class="input-group">
+                    <label>出勤時刻</label>
+                    <input type="time" id="modal-clock-in">
+                </div>
+                <div class="input-group">
+                    <label>退勤時刻</label>
+                    <input type="time" id="modal-clock-out">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-cancel" class="btn btn-secondary">キャンセル</button>
+                <button id="modal-save" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Antigravity Experience</p>
+    </footer>
+
+    <script src="history.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Attendance Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header>
+            <h1>Attendance Manager</h1>
+            <div id="digital-clock" class="clock">00:00:00</div>
+            <p id="current-date" class="date">----/--/--</p>
+        </header>
+
+        <section class="status-card">
+            <div class="status-badge" id="work-status">勤務外</div>
+            <div class="action-buttons">
+                <button id="btn-clock-in" class="btn btn-primary">出勤</button>
+                <button id="btn-clock-out" class="btn btn-secondary" disabled>退勤</button>
+            </div>
+            <a href="history.html" class="nav-link">月別履歴を表示 →</a>
+        </section>
+
+        <section class="history-card">
+            <h2>本日の履歴</h2>
+            <div class="history-list-container">
+                <table id="attendance-history">
+                    <thead>
+                        <tr>
+                            <th>日付</th>
+                            <th>出勤</th>
+                            <th>退勤</th>
+                            <th>勤務時間</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-body">
+                        <!-- 履歴がここに挿入されます -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Antigravity Experience</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
